@@ -1,11 +1,20 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class="base">
+      <navigationBar/>
+      <router-view/>
+  </div>
   </div>
 </template>
 
 <script>
-
+import navigationBar from '@/components/Nav'
+export default {
+  name: 'app',
+  components: {
+    navigationBar
+  },
+}
 </script>
 
 <style>

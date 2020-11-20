@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Base from './views/Base.vue'
+import Delivery from './views/Delivery'
+import Payment from './views/Payment'
+import Receipt from './views/Receipt'
 
 Vue.use(Router)
 
@@ -10,11 +12,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'base',
-      component: Base,
-      children: [
-     
-      ]
+      name: 'delivery',
+      component: Delivery,
+    },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: Payment,
+    },
+    {
+      path: '/receipt',
+      name: 'receipt',
+      component: Receipt,
     },
   ]
 })

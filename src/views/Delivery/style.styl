@@ -1,0 +1,125 @@
+.left-container
+  display: flex
+  flex: 1
+  flex-direction: column
+
+.middle-container
+  display: flex
+  flex: 1
+  flex-direction: column
+
+.header-container
+  display grid
+  grid-template-columns: 4fr 3fr
+  grid-gap: 2em
+
+.outer-container
+  display grid
+  grid-template-columns: 7fr 3fr
+  height 100%
+  grid-gap: 2em
+
+.dropship-container
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  svg 
+    margin-right: 10px
+
+
+.input-container
+  label
+    position: relative
+
+  input
+    font-size: inherit
+    font-family: inherit
+    line-height: 1.5em
+    border: 1px solid lightGray
+    padding: 20px
+    padding-bottom: 15px
+    width: 85%
+    margin-bottom: 0.5em
+
+  span
+    position: absolute
+    opacity: 0.6
+    top: 0
+    left: 15px
+    cursor: text
+    transition: all 0.5s ease-in-out
+
+
+  input.has-value + span,
+  input:focus + span,
+  input:not(:invalid) + span
+    opacity: 1
+    transform: translate(-2px, -1.5em)
+    font-size: 0.7em
+    cursor: default
+    padding-left: 5px
+    margin-bottom: 5px
+
+  svg 
+    position: absolute;
+    top: 0;
+    right: 25px;
+
+
+.text-area-container
+  label
+    position: relative
+
+  textarea
+    font-size: inherit
+    font-family: inherit
+    line-height: 1.5em
+    border: 1px solid lightGray
+    padding: 20px
+    padding-bottom: 15px
+    width: 85%
+    margin-bottom: 0.5em
+
+  span
+    position: absolute
+    opacity: 0.6
+    bottom: 45px;
+    left: 15px
+    cursor: text
+    transition: all 0.5s ease-in-out
+
+
+  textarea.has-value + span,
+  textarea:focus + span,
+  textarea:not(:invalid) + span
+    opacity: 1
+    transform: translate(-2px, -1.5em)
+    font-size: 0.7em
+    cursor: default
+    padding-left: 5px
+    margin-bottom: 15px
+
+  svg 
+    position: absolute;
+    bottom: 45px;
+    right: 25px;
+
+.invalid-input 
+  span 
+    color red
+  input    
+    border: 1px solid red
+  textarea
+    border: 1px solid red
+  svg 
+    color: red
+
+.valid-input 
+  span 
+    color: primaryGreen
+  input    
+    border: 1px solid primaryGreen
+  textarea
+    border: 1px solid primaryGreen
+  svg 
+    color: primaryGreen

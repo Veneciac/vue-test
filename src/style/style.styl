@@ -1,15 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 primaryColor = #fefae8
 primaryMain = #FF8A00
 primaryOpacity = #fbe5bd
-
+primaryGreen = #1BD97B
+textGray = #696969
+lightGray = #CCCCCC
+greenOpacity = rgba(27, 217, 123, 0.2)
 html 
-  background-color: primaryColor;
+  background-color: primaryColor
+  font-family: 'Roboto', sans-serif
 
+p
+  margin: 0
+  padding: 0
 
 .base 
-  background-color: white;
-  width: 90vw;
-  height: 90vh;
-  margin: auto;
-  margin-top: 5vh;
+  background-color: white
+  width: 90vw
+  height: 80vh
+  margin: auto
+  margin-top: 5vh
+  padding: 25px
 
+.header-title
+  h1
+    color: primaryMain
+    div 
+      background-color: #EEEEEE
+      height: 10px
+      margin-top: -12px
+      width: 285px
+
+.container
+  display: flex
+
+.grid-container
+  display: grid
+  grid-template-columns: 4fr 3fr
+  grid-gap: 1.3em
+
+.right
+  float right
+  text-align: right
+
+.bold
+  font-weight: bold
+
+.continue-btn
+  width: 100%
+  margin-top: 20px
+  padding: 15px
+  background-color: primaryMain
+  border: 0
+  color: white
+
+.disabled-continue-btn
+  background-color: primaryOpacity
