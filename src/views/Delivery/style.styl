@@ -19,6 +19,11 @@
   height 100%
   grid-gap: 2em
 
+.grid-container
+  display: grid
+  grid-template-columns: 4fr 3fr
+  grid-gap: 1.3em
+    
 .dropship-container
   display: flex
   align-items: center
@@ -26,6 +31,20 @@
   svg 
     margin-right: 10px
 
+
+@media screen and (max-width: 768px) 
+  .outer-container
+    display flex
+    flex-direction: column
+  .grid-container
+    display: flex
+    flex-direction: column
+  .header-container
+    display: flex
+    flex-direction: column
+  .dropship-container
+    margin-right: 20px
+    margin-bottom: 10px
 
 .input-container
   label

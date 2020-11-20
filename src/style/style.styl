@@ -7,6 +7,7 @@ primaryGreen = #1BD97B
 textGray = #696969
 lightGray = #CCCCCC
 greenOpacity = rgba(27, 217, 123, 0.2)
+
 html 
   background-color: primaryColor
   font-family: 'Roboto', sans-serif
@@ -18,7 +19,8 @@ p
 .base 
   background-color: white
   width: 90vw
-  height: 80vh
+  min-height: 80vh
+  height 100%
   margin: auto
   margin-top: 5vh
   padding: 25px
@@ -34,11 +36,6 @@ p
 
 .container
   display: flex
-
-.grid-container
-  display: grid
-  grid-template-columns: 4fr 3fr
-  grid-gap: 1.3em
 
 .right
   float right

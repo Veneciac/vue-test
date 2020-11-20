@@ -3,7 +3,7 @@
   <div id="nav">
     <div class="nav-item" v-for="item in list" :key="item.key">
       <div class="nav-inner">
-        <div :class="item.key !== pos ? 'nav-item-key' : ' nav-item-key nav-item-key-selected' ">
+        <div :class="item.route !== $route.name ? 'nav-item-key' : ' nav-item-key nav-item-key-selected' ">
           <p>
             {{item.key}}
           </p>
@@ -19,6 +19,7 @@
     <font-awesome-icon icon="arrow-left" />
     <p>
       Back to {{pos == 1 ? 'cart' : 'delivery' }}
+     
     </p>
   </div>
 </div>
@@ -29,24 +30,31 @@
 export default {
   name: 'navigationBar',
   methods: {
-    props: ['pos']
   },
   data() {
     return {
       list: [
         {
           title: "Delivery",
-          key: 1
+          key: 1,
+          route: 'delivery'
         },
         {
           title: "Payment",
-          key: 2
+          key: 2,
+          route: 'payment'
         },
         {
           title: "Finish",
-          key: 3
+          key: 3,
+          route: 'receipt'
         }
       ]
+    }
+  },
+  watch: {
+    $route (val) {
+      console.log(val)
     }
   }
 }
